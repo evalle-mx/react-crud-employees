@@ -1,0 +1,31 @@
+####################################################
+##  Crea una aplicación web con react 
+##  https://www.youtube.com/watch?v=_DJBFUIT2Kg
+##  
+####################################################
+
+
+
+
+$ npx create-react-app crud-employees
+$ npm install react-router-dom --save
+
+
+#####  RUN  ###
+$ npm run start
+
+
+
+
+
+######################################################################################
+Error message "error:0308010C:digital envelope routines::unsupported"
+######################################################################################
+https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+
+Update Index.js & Package dependencies
+
+
+$ npm audit fix --force
+
+package.json > "start": "react-scripts --openssl-legacy-provider start"
