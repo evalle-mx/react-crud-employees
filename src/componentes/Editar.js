@@ -8,7 +8,7 @@ class Editar extends React.Component {
     render() { 
         return ( <div className="card">
             <div className="card-header">
-                Editar
+                Actualizar Empleado
             </div>
             <div className="card-body">
                 <h4 className="card-title">Title</h4>

@@ -18,6 +18,14 @@ $ npm run start
 
 
 
+########  Recursos para prueba (API)  ###
+http://jsonplaceholder.typicode.com/: 
+http://jsonplaceholder.typicode.com/users
+
+https://developers.dailymotion.com/tools/
+
+
+
 ######################################################################################
 Error message "error:0308010C:digital envelope routines::unsupported"
 ######################################################################################

@@ -7,7 +7,7 @@ class Crear extends React.Component {
     render() { 
         return ( <div className="card">
             <div className="card-header">
-                Empleados
+                Nuevo Empleado
             </div>
             <div className="card-body">
                 <h4 className="card-title">Title</h4>
