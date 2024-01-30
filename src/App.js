@@ -26,7 +26,7 @@ function App() {
       <div className="container">
         <Route exact path='/' component={Listar}></Route>
         <Route path='/add' component={Crear}></Route>
-        <Route path='/edit' component={Editar}></Route>
+        <Route path='/edit/:id' component={Editar}></Route>
 
       </div>
     </Router>

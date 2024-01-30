@@ -25,7 +25,12 @@ http://jsonplaceholder.typicode.com/users
 https://developers.dailymotion.com/tools/
 
 
+########  Recursos Bootstrap  ########
+https://getbootstrap.com/docs/4.0/components/buttons/
 
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 ######################################################################################
 Error message "error:0308010C:digital envelope routines::unsupported"
 ######################################################################################
@@ -37,3 +42,20 @@ Update Index.js & Package dependencies
 $ npm audit fix --force
 
 package.json > "start": "react-scripts --openssl-legacy-provider start"
+
+
+
+
+############################################################
+##     https://www.youtube.com/watch?v=kphq2TsVRIs
+##     RUN Docker Mysql (evallemx/Breneli23)
+############################################################
+
+$ docker run --name mysql8 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0
+
+docker pull mysql:8.0
+
+############################################################
+##     How to install and configure PHP (Ubuntu)
+##      https://ubuntu.com/server/docs/programming-php
+############################################################
