@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom"; 
 
+import Api from '../servicios/api';
+
 class Editar extends React.Component {
     constructor(props) {
         super(props);
@@ -10,7 +12,8 @@ class Editar extends React.Component {
     componentDidMount(){
         console.log(this.props.match.params.id);
 
-        fetch('http://localhost/demo/empleados/?consultar='+this.props.match.params.id)
+        // fetch('http://localhost/demo/empleados/?consultar='+this.props.match.params.id)
+        fetch(Api+'?consultar='+this.props.match.params.id)
         .then( respuesta => respuesta.json() )
         .then( (datos) => {
             console.log(datos)
@@ -37,7 +40,8 @@ class Editar extends React.Component {
 
         var datosEnvio= {id:id, nombre:nombre, correo:correo }
 
-        fetch('http://localhost/demo/empleados/?actualizar=1', {
+        //fetch('http://localhost/demo/empleados/?actualizar=1', {
+        fetch(Api+'?actualizar=1', {
             method:'POST',
             body:JSON.stringify(datosEnvio)
         })
@@ -67,13 +71,13 @@ class Editar extends React.Component {
 
                         <div className="form-group">
                           <label htmlFor="id">Clave</label>
-                          <input type="text" className="form-control" readOnly value={empleado.id} name="id" id="id" aria-describedby="helpId" placeholder=""/>
+                          <input required type="text" className="form-control" readOnly value={empleado.id} name="id" id="id" aria-describedby="helpId" placeholder=""/>
                           <small id="helpId" className="form-text text-muted">Help text</small>
                         </div>
 
                         <div className="form-group">
                         <label htmlFor="nombre">Nombre :</label>
-                        <input type="text" name="nombre" value={empleado.nombre} onChange={this.cambioValor} id="nombre" className="form-control" placeholder="" aria-describedby="helpId"/>
+                        <input required type="text" name="nombre" value={empleado.nombre} onChange={this.cambioValor} id="nombre" className="form-control" placeholder="" aria-describedby="helpId"/>
                         <small id="helpId" className="text-muted">Escriba el nombre de empleado</small>
                         </div>
 

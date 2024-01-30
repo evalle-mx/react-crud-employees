@@ -18,8 +18,8 @@ function App() {
               <a className='nav-item nav-link' href='/add'>Nuevo</a>
               <a className='nav-item nav-link' href='/edit'>Editar*</a> */}
               <Link className='nav-item nav-link active' to={'/'}>Home <i className="bi bi-house"></i> </Link>
-              <Link className='nav-item nav-link' to={'/add'}>Nuevo</Link>
-              <Link className='nav-item nav-link' to={'/edit'}>Editar*</Link>
+              {/* <Link className='nav-item nav-link' to={'/add'}>Nuevo</Link>
+              <Link className='nav-item nav-link' to={'/edit'}>Editar*</Link> */}
             </div>
       </nav>
       <br></br>
