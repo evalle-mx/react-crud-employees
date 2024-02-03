@@ -26,7 +26,9 @@ class Listar extends React.Component {
         console.log(`Borrando ${id}...`);
 
         //fetch('http://localhost/demo/empleados/?borrar='+id)
-        fetch(Api+'?borrar='+id)
+        fetch(Api+'?borrar='+id, {
+            method:'DELETE'
+        })
         .then( respuesta => respuesta.json() )
         .then( (datos) => {
             console.log(datos);

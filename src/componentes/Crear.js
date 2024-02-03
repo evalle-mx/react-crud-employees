@@ -42,6 +42,9 @@ class Crear extends React.Component {
         //fetch('http://localhost/demo/empleados/?insertar=1', {
         fetch(Api+'?insertar=1', {
             method:'POST',
+            headers: {
+              "Content-Type": "application/json"
+            },
             body:JSON.stringify(datosEnvio)
         })
         .then( respuesta => respuesta.json() )

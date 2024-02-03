@@ -39,16 +39,21 @@ class Editar extends React.Component {
         
 
         var datosEnvio= {id:id, nombre:nombre, correo:correo }
+        var sBody = JSON.stringify(datosEnvio);
+        console.log(sBody);
 
         //fetch('http://localhost/demo/empleados/?actualizar=1', {
         fetch(Api+'?actualizar=1', {
             method:'POST',
-            body:JSON.stringify(datosEnvio)
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: sBody
         })
         .then( respuesta => respuesta.json() )
         .then( (datos) => {
             console.log(datos);
-            this.props.history.push("/");   //Redirige a Home
+            //this.props.history.push("/");   //Redirige a Home
         })
         .catch(console.error)
     }
